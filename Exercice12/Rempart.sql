@@ -1,4 +1,6 @@
 Drop database if exists rempart;
+
+
 create database rempart;
 
 use rempart;
