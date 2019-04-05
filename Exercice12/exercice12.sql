@@ -8,11 +8,16 @@ select @@session.sql_mode;
 
 set sql_mode='allow_invalid_dates';
 
+select version();
+
 create table partie(
 	idPartie int primary key auto_increment,
     datePartie datetime not null default "0000-00-00 00:00:00",
     visiteur varchar(25) not null default 'null',
     local varchar(25) not null default 'null');
+
+SET GLOBAL READ_ONLY=ON;
+SET GLOBAL READ_ONLY=OFF;
     
 load data infile '//home//manumaldo//BD//BD//Exercice12//REMPARTS.CSV'
 into table partie
