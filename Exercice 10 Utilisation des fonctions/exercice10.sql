@@ -1,11 +1,14 @@
 use elevagech24;
+-- - 2.1 une fonction pour afficher une phrase donnant le prix de l'espèce
 select concat(
 				"Un(e) ", elevagech24.espece.nom_courant,
                 " coute ", elevagech24.espece.prix, " euros." ) as Solution
 	from Espece;
+    
 
 select concat_ws(" ", "Un(e)", nom_courant,"coute",prix) as Solution2 from espece;
 
+-- -2.2 Afficher les chats dont la deuxième lettre du nom est un « a »
 select animal.nom, espece.nom_courant 
 	from animal
 	inner join espece on animal.id = espece.id
